@@ -1,4 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using ConsoleApp3.Ex01;
+using ConsoleApp3.Ex02;
+using ConsoleApp3.Ex03;
+using ConsoleApp3.Ex04;
 using ConsoleApp3.Ex05;
 
 Console.WriteLine("Hello, World!");
@@ -14,6 +18,27 @@ Console.WriteLine("Hello, World!");
 ●	Exercício 5 (mais desafiador): Crie as classes Biblioteca ,Livro, Leitor, Empréstimo.Implemente a lógica para permitir o empréstimo e a devolução de livros na biblioteca.
 
 */
+Motor motor01 = new Motor(1, "FirePlus", 16, 159);
+Carro carro = new Carro(1,"corsa", " City", motor01);
+
+
+Escola escola = new Escola("Adventista", "Rua Bahia");
+Professor prof01 = new Professor("josias", "quimica");
+escola.AddProfessor(prof01);
+
+
+Pedido pedido = new Pedido(1);
+ItemPedido item01 = new ItemPedido(1, "pao");
+pedido.AddItemPedido(item01);
+
+
+
+Departamento departamento =new Departamento(1);
+Funcionario Funcionario01 = new Funcionario(1,"jose");
+departamento.AddFuncionario(1, Funcionario01);
+
+
+
 Biblioteca biblioteca = new Biblioteca();
 
 biblioteca.AddLivro(1, "maria e joao", "Arco","LIVRE");
@@ -22,6 +47,7 @@ biblioteca.AddLivro(3, "maria e joao2", "Arco2", "LIVRE");
 biblioteca.AddLivro(4, "maria e joao3", "Arco3", "LIVRE");
 biblioteca.AddLeitor(1,"fred", "rua regal", true);
 biblioteca.AddEmprestimo(1, 1);
+biblioteca.RetornaLivro(1, 1);
 Console.ReadKey();
 
 

@@ -31,13 +31,25 @@ namespace ConsoleApp3.Ex05
         public void AddEmprestimo(int idLivro ,int idLeitor)
         {
             Emprestimo Ep = new Emprestimo();
-            int indexLivro = livros.Find(r => r.Id == idLivro);
-            int indexLeitor = leitors.FindIndex(id => Leitor.Id == idLeitor);
+            int indexLivro = livros.FindIndex(id => id.Id == idLivro);
+            int indexLeitor = leitors.FindIndex(id => id.Id == idLeitor);
            
             if (Ep.GetLivro(livros[indexLivro], leitors[indexLeitor]))
             {
-                livros[indexLivro].Situacao = "Emprestimo";
+                livros[indexLivro].Situacao = "EMPRESTIMO";
             };
+        }
+        public void RetornaLivro(int idLivro, int idLeitor)
+        {
+            Emprestimo Ep = new Emprestimo();
+            int indexLivro = livros.FindIndex(id => id.Id == idLivro);
+            int indexLeitor = leitors.FindIndex(id => id.Id == idLeitor);
+
+            if (Ep.RetLivro(livros[indexLivro], leitors[indexLeitor]))
+            {
+                livros[indexLivro].Situacao = "LIVRE";
+            };
+
         }
        
       

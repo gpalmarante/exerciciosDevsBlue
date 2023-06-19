@@ -8,10 +8,23 @@ namespace ConsoleApp3.Ex02
 {
     internal class Escola
     {
-        public string nome { get; set; }
-        public string endereco { get; set; }
-        public Professor Professor { get; set; }
+        public string Nome { get; set; }
+        public string Endereco { get; set; }
+        
+        public List<Professor> Professores { get; set; }
 
+        public Escola(string nome, string endereco)
+        {
+            this.Nome = nome;
+            this.Endereco = endereco;
+            Professores = new List<Professor>();
+            Console.WriteLine($"Nova escola criada - {Nome}");
+        }
+        public void AddProfessor(Professor prof)
+        {
+            Professores.Add(prof);
+            Console.WriteLine($"Novo Professor Criado - {prof.Nome}");
 
+        }
     }
 }

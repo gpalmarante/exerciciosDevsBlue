@@ -12,16 +12,14 @@ namespace ConsoleApp3.Ex01
         public string Modelo { get; set; }
         public int Id { get; set; }
         public Motor Motor { get; set; }    
-        public Carro()
-        {
-
-        }
-        public Carro(string name, string modelo, int id, Motor motor)
+       
+        public Carro(int id,string name, string modelo,  Motor motor)
         {
             Name = name;
             Modelo = modelo;
             Id = id;
             Motor = motor;
+            Console.WriteLine($"Carro criado - {name} e com motor - { motor.Name}");
         }
     }
 }

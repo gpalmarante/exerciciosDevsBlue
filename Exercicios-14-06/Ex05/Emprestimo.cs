@@ -11,7 +11,7 @@ namespace ConsoleApp3.Ex05
 
 
 
-        public Boolean GetLivro(Livro livro, Leitor Leitor)
+        public bool GetLivro(Livro livro, Leitor Leitor)
         {
             if (livro.Situacao == "LIVRE" && Leitor.Ativo)
             {
@@ -33,6 +33,30 @@ namespace ConsoleApp3.Ex05
                 return false;
             }
             
+
+        }
+        public bool RetLivro(Livro livro, Leitor Leitor)
+        {
+
+            if (livro.Situacao == "EMPRESTIMO" && Leitor.Ativo)
+            {
+                Console.WriteLine("Livro devolvido");
+                return true;
+            }
+            if (livro.Situacao == "LIVRE")
+            {
+                Console.WriteLine("** Livro INDISPONIVEL Para devolução");
+                return false;
+            }
+            if (!Leitor.Ativo)
+            {
+                Console.WriteLine("**Usuario DESATIVADO **");
+                return false;
+            }
+            else
+            {
+                return false;
+            }
 
         }
 

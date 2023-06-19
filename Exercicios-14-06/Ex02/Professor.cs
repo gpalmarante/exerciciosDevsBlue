@@ -10,9 +10,10 @@ namespace ConsoleApp3.Ex02
     {
         public string Nome { get; set; }
         public string Materia { get; set; }
-        public Professor()
+        public Professor( string nome, string materia  )
         {
-
+            this.Nome = nome;
+            this.Materia = materia;
         }
     }
 }
