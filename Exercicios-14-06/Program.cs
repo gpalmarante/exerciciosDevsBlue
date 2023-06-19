@@ -5,7 +5,6 @@ using ConsoleApp3.Ex03;
 using ConsoleApp3.Ex04;
 using ConsoleApp3.Ex05;
 
-Console.WriteLine("Hello, World!");
 /*
 ●	Exercício 1: Crie as classes Carro e Motor. O carro possui um motor, mas o motor pode existir independentemente do carro.
 
